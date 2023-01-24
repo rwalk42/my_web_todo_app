@@ -9,9 +9,9 @@ def add_todo():
     functions.write_todos(todos)
 
 
-st.title("My To Do App")
-st.subheader("This is my To Do app...")
-st.write("This app is to improve your productivity")
+st.title("Band Setlist Sharing App")
+st.subheader("This allows us to share the setlist and running order online...")
+st.write("Add suggestions to the end of the list. Check the box to remove a song")
 
 
 for index, todo in enumerate(todos):
@@ -23,7 +23,7 @@ for index, todo in enumerate(todos):
         st.experimental_rerun()
 
 
-st.text_input(label="Enter a To Do", placeholder="Add new to do....",
+st.text_input(label="Enter a Song and Artist (separated by a dash)", placeholder="Add new song - artist....",
               on_change=add_todo, key='new_todo')
 
 
